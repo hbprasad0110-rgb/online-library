@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+#h1{ text-size:10000px; background-color:#FF6347;color:white; text-align:center;font-size:100px;padding:0px;margin:0px;}
+
+#a{visibility:hidden;}
+#b{visibility:visible;}
+#${visibility:hidden;}
+</style>
+<script>
+function fu()
+{
+document.getElementById("b").style.visibility="hidden";
+document.getElementById("a").style.visibility="visible";
+}
+function f()
+{
+
+document.getElementById("b").style.visibility="hidden";
+document.getElementById("a").style.visibility="hidden";
+document.getElementById("$").style.visibility="hidden";
+
+}
+</script>
+
+</head>
+
+<body bgcolor="#E9967A" style="margin:0px;padding:0px;">
+<table align="center">
+<form  METHOD=POST  action="fp.php">
+<tr id="b">
+<td> Enter the Email id</td>
+<td> <input type="email" name="useremail" placeholder="Email"></td>
+
+<td><input type="button" value="Next" onclick="fu()"></td>
+</tr>l
+<tr id="a">
+<td> Enter the new password</td>
+<td><input type="password" name="userpassword" placeholder="password"></td>
+
+<td>&nbsp&nbsp&nbsp&nbsp
+<input type="submit" value="submit" onclick="f()">
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

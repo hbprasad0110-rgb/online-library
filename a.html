@@ -1,0 +1,206 @@
+<html>
+<head>
+<style>
+.{margin:0;
+padding:0
+}
+body{background-color:#f0f0f0;}
+.button{width:180px;height:60px;display:block;position:relative;border:2px solid #00f;margin:100px auto;border-radius:9px;background-color:#06c;left:180px;top:0;margin:0;
+}
+.button .content{
+display:block;position:absolute;width:100%;height:100%; background-color:#00f;text-align:center;color:white;line-height:60px;
+box-shadow:0 6px 0 #06c;border-radius:9px;bottom:6px;transition:all 0.1s linear;top:0px;left:0px;margin:0;
+}
+.button:active .content{
+bottom:0;
+box-shadow:0 0 0 #06c
+}
+body{
+  background-color: #1cbb9b;
+}
+.login-box{
+  position:relative;
+  margin: 10px auto;
+  width: 500px;
+  height: 380px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+}
+.lb-header{
+  position:relative;
+  color: #00415d;
+  margin: 5px 5px 10px 5px;
+  padding-bottom:10px;
+  border-bottom: 1px solid #eee;
+  text-align:center;
+  height:28px;
+}
+.lb-header a{
+  margin: 0 25px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  font-size: 15px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+} .lb-header .active{
+  color: #029f5b;
+  font-size: 18px;
+}
+.social-login{
+  position:relative;
+  float: left;
+  width: 100%;
+  height:auto;
+  padding: 10px 0 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.social-login a{
+  position:relative;
+  float: left;
+  width:calc(40% - 8px);
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 12px;
+  border-radius: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 3%;
+  text-align:center;
+}
+.social-login a i{
+  position: relative;
+  float: left;
+  width: 20px;
+  top: 2px;
+} .social-login a:first-child{
+  background-color: #49639F;
+}
+.social-login a:last-child{
+  background-color: #DF4A32;
+}
+#email-login{
+  position:relative;
+  float: left;
+  width: 100%;
+  height:auto;
+  margin-top: 20px;
+  text-align:center;
+}
+.u-form-group{
+  width:100%;
+  margin-bottom: 10px;
+}
+#email-signup{
+margin:0; visibility:hidden;
+position:absolute;
+top:121px;
+  float: left;
+  width: 100%;
+  height:auto;
+  margin-top: 20px;
+  text-align:center;
+}
+
+.u-form-group input[type="email"],
+.u-form-group input[type="password"]{
+  width: calc(50% - 22px);
+  height:45px;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  border-radius: 2px;
+  color: #333;
+  font-size:0.8rem;
+  -webkit-transition:all 0.1s linear;
+  -moz-transition:all 0.1s linear;
+  transition:all 0.1s linear;
+}
+.u-form-group input:focus{
+  border-color: #358efb;
+}
+.forgot-password{
+  width:50%;
+  text-align: left;
+  text-decoration: underline;
+  color: #888;
+  font-size: 0.75rem;
+}
+#to{ width:50px; background-color:blue; height:60px;color:white;border:0px;}
+
+</style>
+<script>
+function fun()
+{
+
+document.getElementById("email-signup").style.visibility="visible";
+document.getElementById("email-login").style.visibility="hidden";
+}
+function fu()
+{
+document.getElementById("email-login").style.visibility="visible";
+document.getElementById("email-signup").style.visibility="hidden";
+}
+
+
+</script>
+</head>
+<body>
+<div class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link" onClick="fu()";>Login</a>
+      <a href="#" id="signup-box-link" onClick="fun()";>Sign Up</a>
+    </div>
+    <div class="social-login">
+      <a href="www.facebook.com">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="www.gmail.com">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+    </div>
+    <form id="email-login" Method=POST action="log_in.php">
+      <div class="u-form-group">
+        <input type="email" name="user_email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" name="user_password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group"><a href="" class="button" >
+<span class="content"><input type="submit" id="to" value="Login"></span></a>
+      </div>
+      <div class="u-form-group">
+        <a href="fp.html" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+    <form id="email-signup" Method=POST action="signup.php">
+      <div class="u-form-group">
+        <input type="email" name="useremail" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" name="userpassword" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+<a href="" class="button">
+<span class="content"> <input type="submit" id="to" value="SignUp"> </span></a>
+      </div>
+    </form>
+  </div>
+
+
+
+
+</body>
+</html>
